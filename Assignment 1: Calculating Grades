@@ -1,0 +1,41 @@
+/* Assignment 1 - Calculating Grades */
+import java.util.Scanner;
+
+class Assignment1 {
+  public static void main(String[] args) {
+    
+   Scanner scan = new Scanner(System.in);
+   String course;
+   int time;
+   
+   System.out.println(" Please enter the course name."); 
+   course = scan.nextLine();
+   System.out.println("Please enter the average time spent in a week for this course in minutes.");
+   time = scan.nextInt();
+ 
+   System.out.println("Please enter the homework grades for this course.");
+   int hw1 = scan.nextInt();
+   int hw2 = scan.nextInt();
+   int hw3 = scan.nextInt();
+   int hw4 = scan.nextInt();
+   
+   System.out.println("Please enter the quiz grades for this course.");
+   double q1 = scan.nextDouble();
+   double q2 = scan.nextDouble();
+  
+   System.out.println("Please enter the final exam grade for this course.");
+   double finalScore = scan.nextDouble();
+   
+   double hwAverage = (double)(hw1+hw2+hw3+hw4)/4; 
+   double quizAverage = (q1+q2)/2;
+   
+   int overallGrade = (int)((0.35*hwAverage + .15*quizAverage + 0.5*finalScore) + 0.5);   
+   System.out.println("Course name: " + course);
+   System.out.println("Weekly time spent: " + time/60 + "h"+ time%60);
+   System.out.println("Average homework grade: " + hwAverage);
+   System.out.println("Average quiz grade: " + quizAverage);
+   System.out.println("Final exam grade: " + finalScore);
+   System.out.println("Overall grade: " + overallGrade);
+    
+  }
+}
