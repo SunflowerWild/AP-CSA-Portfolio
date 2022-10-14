@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    //Create a monster
+    //name and health/damage
+    String monsterName = "Goblin";
+    int monsterHealth = 8;
+    int monsterDamg = 2;
+    
+    //have user create a character's name
+    //set health and damg
+    Scanner scan = new Scanner(System.in);
+    String characterName; 
+  
+
+    System.out.println(" What do you want to name your charcter? ");
+      characterName = scan.nextLine();
+    System.out.println(" Enter your character's health: ");
+int characterHealth = scan.nextInt(); 
+    System.out.println(" Enter your character's attack power: ");
+int characterDamg = scan.nextInt(); 
+    System.out.println(monsterName + " attacks " + characterName);
+    characterHealth = characterHealth - monsterDamg; 
+    System.out.println( characterName + " has " + characterHealth + " hp remaining!");
+    
+    System.out.println(characterName + " attacks " + monsterName);
+    monsterHealth = monsterHealth - characterDamg; 
+    System.out.println( monsterName + " has " + monsterHealth + " hp remaining!");
+      //Have them fight
+      //Display results
+    
+  }
+}
