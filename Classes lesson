@@ -1,0 +1,40 @@
+//class creation
+public class Person
+  {
+    //privte fields 
+    private String firstName; 
+    private String lastName; 
+    private int age; 
+    private String ssn; 
+     
+  
+    //constructor 
+    public Person(String first, String last, int agee, String ssnin)
+    {
+      firstName= first;
+      lastName = last; 
+      age = agee; 
+      ssn = ssnin;
+    }
+    public String toString()
+      {
+        return ("SSN: "+ ssn + "\n\tName: " + firstName + " " + lastName + "\n\tAge: " + age);
+      }
+  }
+
+
+//filerunner
+public static void main(String[] args)
+  {
+    Scanner Scan = new Scanner(SYstem.out);
+  	System.out.println("Enter the person's first name:");
+  	String fName = scan.nextLine();
+  	System.out.println("Enter the person's last name: ");
+  	String lName = scan.nextLine();
+  	System.out.println("Enter the person's age: ");
+  	int a = scan.nextInt();
+  	System.out.println("Enter the person's social security number: ");
+  	String social = scan.nextLine();
+  	
+  	Person( fName,lName,a,social);
+  }
